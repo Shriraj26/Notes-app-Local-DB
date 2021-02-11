@@ -8,7 +8,7 @@ module.exports.deleteFunction = function(id){
 			return;
 		}
 		
-		console.log(`ID ${id} deleted from DB successbully`);
+		console.log(`ID ${id} deleted from DB successfully`);
 		return;
 	});
 }
