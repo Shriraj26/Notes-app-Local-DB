@@ -1,0 +1,134 @@
+body{
+	display: flex;
+	justify-content: center;
+	background-color: #F1F0EB;
+	/* background-color: indigo; */
+}
+
+/*Main Container containing all the stuff*/
+#main-container{
+	padding-top: 1em;
+}
+
+/*Main Heading*/
+.container:nth-child(1) h1{
+	text-align: center;
+}
+
+/*Add note button*/
+i.fa-plus-circle{
+	font-size: 3em;
+	color: purple;
+	margin-right: 0.5em;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+i.fa-plus-circle:hover{
+	transform: scale(1.2);
+}
+.btn-danger, .btn-info{
+	min-height: 50px;
+}
+
+/*The add note button, select and delete all buttons => container*/
+.container:nth-child(2){
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/*Select All Button*/
+.btn-info{
+	margin-right: 1em;
+}
+
+
+/*Card*/
+.card{
+	cursor: pointer;
+	max-width: 400px;
+}
+/*Selected Cards*/
+.select-cards{
+	border: 0.5px solid red;
+}
+#unselect-all-btn{
+	background-color: rgba(126, 239, 104, 0.6);
+}
+/*Card Hover*/
+.card:hover{
+	transform: scale(1.01);
+	transition: 200ms ease-in-out;
+}
+/*Card Header */
+.card-header p{
+	font-size: 1em;
+}
+/*Card Title*/
+.card-body p:nth-child(1){
+	font-size: 1.2em;
+}
+/*Card Description*/
+.card-body p:nth-child(2){
+	font-size: 1em;
+}
+/*Card Date and Time*/
+.card-body p:nth-child(3), .card-body p:nth-child(4){
+	font-size: 0.8em;
+}
+
+
+/*add notes Modal*/
+#modal{
+	background-color: #FFF2AB;
+	height: auto;
+	width: 400px;
+	margin-bottom: 2em;
+	margin-top: 1em !important;
+	padding: 2em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); /*Hide it scale - 0*/
+	z-index: 10;
+	transition: 200ms ease-in-out;
+	border-radius: 12px;
+}
+#modal.active{
+	transform: translate(-50%, -50%) scale(1);
+}
+input, textarea, select{
+	border-width:0px;
+	border:none;
+	border-radius: 2px;
+}
+.form-control:focus,input:focus, select:focus{
+	outline: none;
+	box-shadow: none;
+	border-color: rgba(126, 239, 104, 0.8);
+  	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  	outline: 0 none;
+}
+
+/*Overlay*/
+#overlay{
+	background-color: rgba(0, 0, 0, .5);
+	opacity: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	pointer-events: none;
+	transition: 200ms ease-in-out;
+}
+#overlay.active{
+	opacity: 1;
+	pointer-events: all;
+}
+
+a{
+	text-decoration: none;
+}
+

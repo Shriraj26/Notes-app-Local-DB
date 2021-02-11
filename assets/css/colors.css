@@ -1,0 +1,47 @@
+/*Personal*/
+.personal-color-header{
+	background-color: #B7DFFF;
+}
+.personal-color-body{
+	background-color: #CDE9FF;
+}
+
+/*School*/
+.school-color-header{
+	background-color: #DBB7FF;
+}
+.school-color-body{
+	background-color: #E7CFFF;
+}
+
+/*Mood*/
+.mood-color-header{
+	background-color: #FFBBDD;
+}
+.mood-color-body{
+	background-color: #FFCCE5;
+}
+
+/*Business*/
+.business-color-header{
+	background-color: #AFECA4;
+}
+.business-color-body{
+	background-color: #CBF1C4;
+}
+
+/*Random*/
+.random-color-header{
+	background-color: #FFEB81;
+}
+.random-color-body{
+	background-color: #FFF2AB;
+}
+
+/*Work*/
+.work-color-header{
+	background-color: #E5E5E5;
+}
+.work-color-body{
+	background-color: #F9F9F9;
+}
