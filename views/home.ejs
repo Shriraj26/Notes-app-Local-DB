@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +17,9 @@
 	<!--Date time picker-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 	
+	<!--Emoji-->
+	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
 	<title>
 		Notes Web App!!
 	</title>
@@ -29,10 +29,16 @@
 	<div id="main-container">
 
 		<div class="container mb-3">
-			<h1>Post it!!!</h1>
-		</div>
-		<div class="container">
 			
+			<h1>
+				<i class="em em-spiral_note_pad" aria-role="presentation" aria-label=""></i>
+				Note it!
+				<i class="em em-notebook_with_decorative_cover" aria-role="presentation" aria-label="NOTEBOOK WITH DECORATIVE COVER"></i>
+			</h1>
+			
+		</div>
+
+		<div class="container">
 			<i class="fas fa-plus-circle" id="add-note-btn" data-modal-target="#modal" ></i>
 			<button type="button" class="btn btn-info" id="select-all-btn">Select All</button>
 			<button type="button" class="btn btn-info" id="unselect-all-btn">Unselect All</button>
@@ -94,35 +100,35 @@
 		</div>
 		
 		
-			<div class="container" id="modal">
-				<h1>Add A Note</h1>
-				<form action="/createNote" method="POST">
-					<div class="form-group">
-						<label for="formGroupExampleInput">Title</label>
-						<input type="text" name="noteTitle" class="form-control mb-2" id="formGroupExampleInput" placeholder="Enter title for your note..." required>
+		<div class="container" id="modal">
+			<h1>Add A Note</h1>
+			<form action="/createNote" method="POST">
+				<div class="form-group">
+					<label for="formGroupExampleInput">Title</label>
+					<input type="text" name="noteTitle" class="form-control mb-2" id="formGroupExampleInput" placeholder="Enter title for your note..." required>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1" >Description</label>
+					<textarea name="noteDesc" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
 					</div>
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1" >Description</label>
-						<textarea name="noteDesc" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-						</div>
-						<label class="col-md-12 my-1 mr-2" for="inlineFormCustomSelectPref">Type</label>
-						<select name="noteType" class="col-md-12 custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
-						<option value="">Choose...</option>
-						<option value="Personal">Personal</option>
-						<option value="Work">Work</option>
-						<option value="Business">Business</option>
-						<option value="School">School</option>
-						<option value="Mood">Mood</option>
-						<option value="Random">Random</option>
-						</select>
-						<label  for="" class="col-12">Set Date and Time</label>
-						<input  name="noteDateTime" id="datetime" required class="col-12">
-					<button type="submit" class="btn btn-primary mt-3" id="submit-note-btn">Submit</button>
-					<button type="reset" class="btn btn-primary mt-3 bg-danger" id="cancel-note-btn" data-close-btn >Cancel</button>
-				</form>
-			</div>
+					<label class="col-md-12 my-1 mr-2" for="inlineFormCustomSelectPref">Type</label>
+					<select name="noteType" class="col-md-12 custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
+					<option value="">Choose...</option>
+					<option value="Personal">Personal</option>
+					<option value="Work">Work</option>
+					<option value="Business">Business</option>
+					<option value="School">School</option>
+					<option value="Mood">Mood</option>
+					<option value="Random">Random</option>
+					</select>
+					<label  for="" class="col-12">Set Date and Time</label>
+					<input  name="noteDateTime" id="datetime" required class="col-12">
+				<button type="submit" class="btn btn-primary mt-3" id="submit-note-btn">Submit</button>
+				<button type="reset" class="btn btn-primary mt-3 bg-danger" id="cancel-note-btn" data-close-btn >Cancel</button>
+			</form>
+		</div>
 		
-			<div id="overlay"></div>
+		<div id="overlay"></div>
 
 			
 	
@@ -137,14 +143,13 @@
 	<!--JQuery-->
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	
-
 	<!--Date Time Picker-->
 	<script src="./js/jquery.datetimepicker.full.js"></script>
 	
 	<!--Font-awesome-->
 	<script src="https://kit.fontawesome.com/e7d8992a99.js" crossorigin="anonymous"></script>
 	
-	<!--Local JS File-->
+	<!--Local JS Files-->
 	<script src="./js/modal.js"></script>
 	<script src="./js/home.js"></script>
 	

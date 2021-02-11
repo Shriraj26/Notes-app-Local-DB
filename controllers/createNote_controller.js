@@ -4,10 +4,6 @@ module.exports.createNoteFunc = function(req, res){
 	
 	var dateArr = req.body.noteDateTime.split(" ");
 	
-	console.log(dateArr[0]);
-	console.log(dateArr[1]);
-	
-	
 	Note.create(
 		{
 			title: req.body.noteTitle,

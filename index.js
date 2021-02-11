@@ -4,17 +4,11 @@ const port = 8000
 
 const app = express();
 
-const Note = require('./models/notes');
-
-app.use(express.urlencoded());  
 //The middleware parser to get the form data that client has filled up.
-
+app.use(express.urlencoded());  
 
 //Tell middleware to access static files from assets
 app.use(express.static('./assets'));
-
-//Import the DB from mongoose file
-const db = require('./config/mongoose');
 
 //Use the express router that we defined in router/index.js file
 app.use('/', require('./routes'));
